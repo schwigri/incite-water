@@ -1,1 +1,20 @@
-'use strict';var monitorMasthead=function(a,b){0<b?(a.style.transition='',a.classList.add('light')):0>b?(a.style.transition='0',a.classList.add('light')):(a.style.transition='',a.classList.remove('light')),console.log(b)},pageId=document.body.getAttribute('id'),masthead=document.getElementById('masthead');'sign-up'!==pageId&&'log-in'!==pageId&&window.setInterval(function(){var a=window.scrollY;monitorMasthead(masthead,a)},10);
+let monitorMasthead = (m, y) => {
+  if (y > 0) {
+    m.style.transition = '';
+    m.classList.add('light');
+  } else if (y < 0) {
+    m.style.transition = '0';
+    m.classList.add('light');
+  } else {
+    m.style.transition = '';
+    m.classList.remove('light');
+  }
+};
+let masthead = document.getElementById('masthead');
+let pageId = document.body.getAttribute('id');
+if (pageId === 'home') {
+  window.setInterval(() => {
+    let y = window.scrollY;
+    monitorMasthead(masthead, y);
+  }, 10);
+}
