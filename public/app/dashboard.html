@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en-US">
+  <meta charset="utf-8">
+  <title>Incite Dashboard</title>
+  <link rel="stylesheet" href="/assets/styles/dashboard.min.css">
+  <div id="application">
+    <div id="sidebar">
+      <div id="sidebar-title">
+        <span>Incite Dashboard</span>
+      </div>
+    </div>
+    <div id="content">
+      <header>
+        <h1>Your instant results!</h1>
+      </header>
+      <div id="potential-savings">
+        <div id="dollar-savings-container">
+          <h2 class="good">$<span id="dollar-savings"></span></h2>
+          <span>How much money you could save per year.</span>
+        </div>
+        <div id="gallons-savings-container">
+          <h2 class="good"><span id="gallon-savings"></span> gal</h2>
+          <span>How many gallons you could save per year.</span>
+        </div>
+        <div id="initial-cost-container">
+          <h2 class="bad">$<span id="initial-cost"></span></h2>
+          <span>The upfront cost of these projects.</span>
+        </div>
+        <div id="payback-container">
+          <h2 class="bad"><span id="payback"></span> years</h2>
+          <span>How long it would take for these projects to pay themselves off.</span>
+        </div>
+        <div id="potential-credits-container">
+          <h2 class="good"><span id="potential-credits"></span></h2>
+          <span>How many Incite Exchange credits per year you can earn.</span>
+        </div>
+        <div id="credits-value-container">
+          <h2 class="good">$<span id="credits-value"></span></h2>
+          <span>How much money your credits are worth.</span>
+        </div>
+        <div id="subsidised-payback-container">
+          <h2 class="good"><span id="subsidised-payback"></span> years</h2>
+          <span>How long it would take for these projects to pay themselves off after selling your credits.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    'use strict';var theURL=new URL(window.location.href),dollarSavings=theURL.searchParams.get('d'),gallonSavings=theURL.searchParams.get('g'),cost=theURL.searchParams.get('c'),payback=theURL.searchParams.get('p'),credits=theURL.searchParams.get('cr'),creditsValue=theURL.searchParams.get('cv'),subsidisedPayback=theURL.searchParams.get('sp');document.getElementById('dollar-savings').innerHTML=dollarSavings,document.getElementById('gallon-savings').innerHTML=gallonSavings,document.getElementById('initial-cost').innerHTML=cost,document.getElementById('payback').innerHTML=payback,document.getElementById('potential-credits').innerHTML=credits,document.getElementById('credits-value').innerHTML=creditsValue,document.getElementById('subsidised-payback').innerHTML=subsidisedPayback;
+  </script>
+  </hmtl>

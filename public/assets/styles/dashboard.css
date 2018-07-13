@@ -1,0 +1,138 @@
+
+a,
+blockquote,
+body,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+img,
+input,
+label,
+li,
+ol,
+p,
+pre,
+td,
+th,
+ul {
+    border: 0;
+    margin: 0;
+    outline: none;
+    padding: 0; }
+
+a {
+    color: inherit;
+    outline: 3px solid transparent;
+    outline-offset: 3px;
+    text-decoration: none; }
+a:hover {
+    color: inherit; }
+
+body {
+    font-size: 100%;
+    line-height: 1; }
+
+button {
+    appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    border: 0;
+    margin: 0;
+    padding: 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%; }
+
+img {
+    border: 0; }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0; }
+
+body,
+html {
+    font-family: system-ui;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+    width: 100%;
+    color: white;
+    text-shadow: 1px 1px 3px #000; }
+
+#application {
+    display: flex;
+    height: 100%;
+    width: 100%; }
+
+#sidebar {
+    align-items: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 200px;
+    display: none; }
+
+#sidebar-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 1.15;
+    padding: 1em; }
+
+#content {
+    box-sizing: border-box;
+    flex-grow: 1;
+    height: 100%;
+    overflow: auto;
+    padding: 2.1em 2.8em 1.4em; }
+#content header h1 {
+    text-align: center;
+    font-size: 2em; }
+
+#potential-savings {
+    display: grid;
+    grid-column-gap: .7em;
+    grid-row-gap: .7em;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2.8em 0; }
+#potential-savings > div {
+    background-color: rgba(255, 255, 255, 0.35);
+    box-sizing: border-box;
+    padding: 1em;
+    text-align: center; }
+#potential-savings > div h2 {
+    font-size: 1.6em;
+    margin-bottom: .5em; }
+#potential-savings > div > span {
+    font-size: .9em;
+    line-height: 1.4; }
+
+#subsidised-payback-container {
+    grid-column: auto / span 2; }
+
+@media only screen and (max-width: 800px) {
+    #potential-savings {
+        grid-template-columns: 1fr; } }

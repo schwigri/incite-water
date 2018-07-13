@@ -1,0 +1,80 @@
+a,
+blockquote,
+body,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+img,
+input,
+label,
+li,
+ol,
+p,
+pre,
+td,
+th,
+ul {
+  border: 0;
+  margin: 0;
+  outline: none;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  outline: 3px solid transparent;
+  outline-offset: 3px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+}
+
+body {
+  font-size: 100%;
+  line-height: 1;
+}
+
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+img {
+  border: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

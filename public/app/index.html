@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en-us">
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="viewport" content="initial-scale=1">
+  <title>Getting Started - Incite Water</title>
+  <link rel="stylesheet" href="/assets/styles/app.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700">
+  <body id="calculator">
+    <div id="welcome">
+      <div id="pages-container">
+        <div id="loading-page" class="page welcome-page current">
+          <img src="/assets/graphics/loading.gif" width="200" alt="Loading..." style="filter: blur(.5px); transform: scale(.8); opacity: .8;">
+        </div>
+        <div id="calculator-page-1" class="page welcome-page" data-page="1">
+          <h1>Tell us about your home.</h1>
+          <form method="post">
+            <label>
+              <span>How many people live in your home?</span>
+              <select class="input" id="household-size">
+                <option value="1">1</option>
+                <option selected value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7+</option>
+              </select>
+            </label>
+            <label>
+              <span>What is the size of your roof in square feet? If you don't know, check <a href="http://measurelotsize.com/" style="color: #07c; text-shadow: 0 1px 2px #000" target="_blank">MeasureLotSize</a>.</span>
+              <input type="text" class="input" id="roof-size">
+            </label>
+            <label>
+              <span>Do you have space available about the size of a fridge?</span>
+              <select class="input" id="space-available">
+                <option selected value="0">No</option>
+                <option value="1">Yes, about one fridge sized space</option>
+                <option value="2">Yes, about two fridge sized spaces</option>
+                <option value="3">Yes, about three or more fridge sized spaces</option>
+              </select>
+            </label>
+            <button disabled="disabled" class="button action continue" type="submit" id="p1done-button">Continue</button>
+          </form>
+        </div>
+        <div id="calculator-page-2" class="page welcome-page" data-page="2">
+          <button class="back-button" data-target="1">Back</button>
+          <h1>Tell us about you.</h1>
+          <form method="post">
+            <label>
+              <span>Are you open to DIY solutions?</span>
+              <select class="input" id="open-to-diy">
+                <option selected value="1">Yes</option>
+                <option value="0">No</option>
+              </select>
+            </label>
+            <label>
+              <span>Do you have irrigated landscape or garden?</span>
+              <select class="input" id="garden">
+                <option selected value="no">No</option>
+                <option value="flowers">Yes</option>
+              </select>
+            </label>
+            <button class="button action continue" type="submit" id="p2done-button">Continue</button>
+          </form>
+        </div>
+        <div id="calculator-page-3" class="page welcome-page" data-page="3">
+          <button class="back-button" data-target="2">Back</button>
+          <h1>Tell us about your appliances.</h1>
+          <form method="post">
+            <label>
+              <span>How old about is your toilet?</span>
+              <select class="input" id="toilet-age">
+                <option selected value="old">Older than 1992</option>
+                <option value="new">Newer than 1992</option>
+              </select>
+            </label>
+            <label>
+              <span>Which of the following best describes your washing machine?</span>
+              <select class="input" id="washing-machine-age">
+                <option selected value="old">Purchased 2002 or earlier</option>
+                <option value="mid">Purchased between 2003 and 2010</option>
+                <option value="new">Purchased 2011 or later</option>
+              </select>
+            </label>
+            <label>
+              <span>How old about is your dishwasher?</span>
+              <select class="input" id="dishwasher-age">
+                <option selected value="old">Older than 2007</option>
+                <option value="new">Newer than 2007</option>
+              </select>
+            </label>
+            <label>
+              <span>Do you have low-flow showerheads?</span>
+              <select class="input" id="showerheads-low-flow">
+                <option selected value="no">No</option>
+                <option value="yes">Yes</option>
+                <option value="maybe">I am not sure</option>
+              </select>
+            </label>
+            <button class="button action" type="submit" id="p3done-button">Continue</button>
+          </form>
+        </div>
+        <div id="calculator-page-4" class="page welcome-page" data-page="4">
+          <iframe src="dashboard.html" seamless="seamless" id="dashboard"></iframe>
+          <div style="padding-bottom: 4em;"><button class="button action continue" type="submit" id="p4done-button">Show Me How</button></div>
+        </div>
+        <div id="calculator-page-5" class="page welcome-page" data-page="5" style="background-image: url(/assets/graphics/final.png); background-position: center; background-repeat: no-repeat; background-size: contain; background-color: white;">
+        </div>
+        <div id="calculator-page-6" class="page welcome-page" data-page="6">
+          <h1>Your instant results!</h1>
+          <h2>You can save $<span id="dollar-savings">0</span> per year!</h2>
+          <h2>You can save <span id="water-savings">0</span> gallons per year, equal to <span id="bottles-saved">0</span> bottles of water.</h2>
+          <h2>By spending $<span id="cost">0</span>.00 one time.</h2>
+          <br>
+          <h2>Your house could sell <span id="credits">0</span> credits per year on the Incite Exchange.</h2>
+          <h2>You can earn $<span id="credits-potential">0</span> by selling your credits on the Incite Exchange.</h2>
+          <h2>Without the extra cash from your Incite credits, these projects pay for themselves in <span id="payback-months">0</span> months.</h2>
+          <h2>With cash from Incite credits, these projects will pay for themselves in <span id="credits-payback">0</span> months.</span></h2>
+          <button class="button action" style="width: 420px;">Show me how</button>
+        </div>
+      </div>
+      <div id="pages-pagination">
+        <div class="page-indicator" id="p1-indicator"></div>
+        <div class="page-indicator" id="p2-indicator"></div>
+        <div class="page-indicator" id="p3-indicator"></div>
+        <div class="page-indicator" id="p4-indicator"></div>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+    <script src="/assets/scripts/app.min.js"></script>
+  </body>
+</html>
